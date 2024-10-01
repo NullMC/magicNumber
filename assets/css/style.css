@@ -1,0 +1,14 @@
+.header{
+    height: 90vh;
+    padding: 2vw;
+    margin: 2vw;
+    border-radius: 1rem;
+    background-color: lightgray;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.header h2,p{
+    font-family: sans-serif;
+    color: #202020;
+}
