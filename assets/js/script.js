@@ -15,7 +15,7 @@ function handleClick(event){
     const inputUtente = document.querySelector("#guess")
     const numeroUtente = parseInt(inputUtente.value)
     
-    if (isNaN(numeroUtente) || numeroUtente < 1 || numeroUtente > 100) {
+    if (isNaN(numeroUtente) || numeroUtente < 0 || numeroUtente > 100) {
         console.log("Inserisci un numero da 1 a 100.");
     }
     
