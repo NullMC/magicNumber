@@ -9,22 +9,39 @@
 </head>
 <body>
     <header>
-        <h1 class="page_title">
-            Indovina il numero magico
+        <h1 class="page_title inter">
+            INDOVINA IL NUMERO
         </h1>
     </header>
 
     <div class="rules">
-        <p>
-            Prova ad indovinare il numero magico<br>clicca sul pulsante "Invia" per confermare
-        </p>
+        <ol class="inter">
+
+            <li>Il computer sceglierà segretamente un numero intero casuale tra 1 e 100.</li>
+            <li>Il tuo obiettivo è indovinare questo numero segreto nel minor numero di tentativi possibile.</li>
+            <li>Ad ogni tentativo, inserisci un numero e il computer ti darà un indizio:
+                <ul>
+                    <li>Se il tuo numero è troppo basso, ti dirà "Troppo basso, prova un numero più alto!"</li>
+                    <li>Se il tuo numero è troppo alto, ti dirà "Troppo alto, prova un numero più basso!"</li>
+                    <li>Se indovini il numero esatto, vincerai la partita!</li>
+                </ul>
+            </li><br>
+            <li>Continua a fare tentativi finché non indovini il numero magico.</li>
+            <li>Alla fine del gioco, ti verrà mostrato il numero di tentativi che hai impiegato per indovinare.</li>
+            <li>Sfida te stesso a indovinare il numero con il minor numero di tentativi possibile!</li>
+
+        </ol>
     </div>
 
     <div class="form_container">
+        <p>Inserisci il numero magico</p>
         <form action=" " method="get">
             <input type="number" name="guess" id="guess">
             <input type="button" name="btn" id="guessBTN" value="Invia">
         </form>
+    </div>
+    <div class="game_output">
+
     </div>
 
 

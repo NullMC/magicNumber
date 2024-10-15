@@ -1,50 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+
 body{
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    background-color: #CCFFC5;
 }
 
-header h1{
-    font-family: sans-serif;
-    color: #202020;
+.page_title{
+    font-size: 50px;
 }
 
-.rules p{
-    font-family: sans-serif;
-    color: #202020;
-}
-
-
-.form_container{
-    padding: 5vw;
-    margin: 1vw;
-    border-radius: 1.1rem;
-    background-color: lightgray;
-
-}
-
-.form_container form{
-    display: flex;
-    flex-flow: column;
-}
-
-#guess{
-    border: 1px solid lightgrey;
-    font-family: sans-serif;
-    color: #202020;
-    border-radius: 1.1rem;
-    margin-top: 1.5vh;
-}
-#guessBTN{
-    font-family: sans-serif;
-    border: 1px solid #909090;
-    border-radius: 1.1rem;
-    margin-top: 1.5vh;
-    width: 50%;
-    cursor: pointer;
-}
-
-#guessBTN:hover{
-    background-color: lightgray;
+.rules ol{
+ font-size: 16px;
 }
