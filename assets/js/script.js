@@ -1,38 +1,40 @@
-function generateRandomInteger(min = 0,  max = 100){
-    let number = Math.random()
-    number = number * (max - min) + min
-    return Math.floor(number)
+function getRandomInt(min = 0, max = 100) {
+    let number = Math.random();
+    number = number * (max - min) + min;
+    return Math.floor(number);
 }
 
-const numeroSegreto = generateRandomInteger(0, 100);
-let tentativi = 5;
+let vite = 5;
+const guessNumber = getRandomInt(0, 100);
 
-let btn = document.querySelector("#guessBTN")
+let btn = document.querySelector("#guessBtn");
+let output = document.querySelector('#output');
+output.innerHTML = `Hai ancora <strong> ${vite} </strong> vite`;
 
-function handleClick(event){
-    console.log(event)
+function handleClick() {
+    const userField = document.querySelector("#guess");
+    const userNumber = parseInt(userField.value);
+    console.log(guessNumber)
 
-    const inputUtente = document.querySelector("#guess")
-    const numeroUtente = parseInt(inputUtente.value)
-    
-    if (isNaN(numeroUtente) || numeroUtente < 0 || numeroUtente > 100) {
-        console.log("Inserisci un numero da 1 a 100.");
-    }
-    
-    if (numeroUtente > numeroSegreto) {
-        console.log("Troppo grande");
-    } else if (numeroUtente < numeroSegreto) {
-         console.log("Troppo piccolo");
-    } else if (numeroUtente === numeroSegreto) {
-        console.log("Sei Cane, hai vinto!");
-    }
-    
-    tentativi--;
-    console.log(`Tentativi rimasti: ${tentativi}`);
-    
-    if (tentativi === 0) {
-        console.log(`Hai perso! Il numero segreto era ${numeroSegreto}.`);
+    if (vite > 0) {
+        if (isNaN(userNumber) || userNumber < 0 || userNumber > 100) {
+            output.innerHTML = "Inserisci un numero intero da 1 a 100.";
+        } else if (userNumber === guessNumber) {
+            output.innerHTML = "Bravo, hai indovinato!";
+        } else {
+            vite--;
+            if (userNumber > guessNumber) {
+                output.innerHTML = "Troppo grande. ";
+            } else if (userNumber < guessNumber) {
+                output.innerHTML = "Troppo piccolo. ";
+            }
+            output.innerHTML += `Hai ancora <strong>${vite}</strong> vite.`;
+        }
+
+        if (vite === 0) {
+            output.innerHTML = `Hai esaurito le vite. Il numero era ${guessNumber}.`;
+        }
     }
 }
 
-btn.addEventListener("click", handleClick)
+btn.addEventListener("click", handleClick);

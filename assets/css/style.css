@@ -4,7 +4,7 @@
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-  }
+}
   
 
 body{
@@ -13,6 +13,31 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #CCFFC5;
+}
+
+#guessBtn{
+    font-weight: bold;
+    background-color: #3AE3A8;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+form input{
+    width: 350px;
+    height: 60px;
+    border-radius: 5px;
+    margin-top: 18px;
+    border: none;
+}
+
+#guess{
+    background-color: #fff;
+    text-align: center;
 }
 
 .page_title{
