@@ -19,6 +19,11 @@ body{
     font-weight: bold;
     background-color: #3AE3A8;
     text-align: center;
+    transition: ease 0.1s;
+}
+
+#guessBtn:hover{
+    background-color: lightgreen;
 }
 
 form{
