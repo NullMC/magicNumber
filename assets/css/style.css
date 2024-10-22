@@ -7,23 +7,47 @@
 }
   
 
+
 body{
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+}
+
+.greenBg{
     background-color: #CCFFC5;
+}
+.yellowBg{
+    background-color: yellow;
+}
+.redBg{
+    background-color: crimson;
+}
+
+.transition{
+    transition: ease-in 0.2s;
 }
 
 #guessBtn{
     font-weight: bold;
-    background-color: #3AE3A8;
     text-align: center;
     transition: ease 0.1s;
+    opacity: 0.9;
 }
 
 #guessBtn:hover{
-    background-color: lightgreen;
+    opacity: 1;
+}
+
+.greenBtnBg{
+    background-color: #3AE3A8;
+}
+.yellowBtnBg{
+    background-color: darkgoldenrod;
+}
+.redBtnBg{
+    background-color: brown;
 }
 
 form{

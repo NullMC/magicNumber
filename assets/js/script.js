@@ -7,6 +7,8 @@ function getRandomInt(min = 0, max = 100) {
 let vite = 5;
 const guessNumber = getRandomInt(0, 100);
 
+let body = document.querySelector("#body")
+
 let btn = document.querySelector("#guessBtn");
 let output = document.querySelector('#output');
 output.innerHTML = `Hai ancora <strong> ${vite} </strong> vite`;
@@ -29,6 +31,24 @@ function handleClick() {
                 output.innerHTML = "Troppo piccolo. ";
             }
             output.innerHTML += `Hai ancora <strong>${vite}</strong> vite.`;
+
+            if (vite === 3){
+                body.classList.remove("greenBg")
+                body.classList.add("yellowBg")
+
+                btn.classList.remove("greenBtnBg")
+                btn.classList.add("yellowBtnBg")
+            }
+            else{
+
+                if (vite === 1){
+                    body.classList.remove("yellowBg")
+                    body.classList.add("redBg")
+    
+                    btn.classList.remove("yellowBtnBg")
+                    btn.classList.add("redBtnBg")
+                }
+            }
         }
 
         if (vite === 0) {
